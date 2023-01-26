@@ -1,0 +1,16 @@
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\AirlineSendAgent.exe
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\AirlineSendAgent.deps.json
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\AirlineSendAgent.runtimeconfig.json
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\AirlineSendAgent.runtimeconfig.dev.json
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\AirlineSendAgent.dll
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\ref\AirlineSendAgent.dll
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\bin\Debug\net5.0\AirlineSendAgent.pdb
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.csproj.AssemblyReference.cache
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.AssemblyInfoInputs.cache
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.AssemblyInfo.cs
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.csproj.CoreCompileInputs.cache
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.dll
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\ref\AirlineSendAgent.dll
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.pdb
+C:\Workspace\Webhooks-with-NET5\AirlineSendAgent\obj\Debug\net5.0\AirlineSendAgent.genruntimeconfig.cache
