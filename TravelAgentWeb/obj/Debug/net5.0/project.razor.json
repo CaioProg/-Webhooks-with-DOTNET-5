@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "c:\\Workspace\\Webhooks-with-NET5\\AirlineWeb\\obj\\Debug\\net5.0\\project.razor.json",
-  "FilePath": "c:\\Workspace\\Webhooks-with-NET5\\AirlineWeb\\AirlineWeb.csproj",
+  "SerializedFilePath": "c:\\Workspace\\Webhooks-with-NET5\\TravelAgentWeb\\obj\\Debug\\net5.0\\project.razor.json",
+  "FilePath": "c:\\Workspace\\Webhooks-with-NET5\\TravelAgentWeb\\TravelAgentWeb.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -17628,7 +17628,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "AirlineWeb",
+  "RootNamespace": "TravelAgentWeb",
   "Documents": [],
   "SerializationFormat": "0.3"
 }
