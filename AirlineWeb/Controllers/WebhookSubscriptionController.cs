@@ -10,7 +10,7 @@ using AutoMapper;
 
 namespace AirlineWeb.Controllers
 {   
-    [Route("api/[countroller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class WebhookSubscriptionController : ControllerBase
     {
@@ -32,7 +32,7 @@ namespace AirlineWeb.Controllers
             {
                 return NotFound();            
             }
-            return Ok(_mapper.Map<WebhookSubscriptionCreateDto>(subscription));
+            return Ok(_mapper.Map<WebhookSubscriptionReadDto>(subscription));
         }
 
 
@@ -59,7 +59,7 @@ namespace AirlineWeb.Controllers
 
                 var webhookSubscriptionReadDto = _mapper.Map<WebhookSubscriptionReadDto>(subscription);
 
-                return CreatedAtRoute(nameof(GetSubscriptionBySecret), new { secret = webhookSubscriptionReadDto.Secret}, webhookSubscriptionCreateDto);
+                return CreatedAtRoute(nameof(GetSubscriptionBySecret), new { secret = webhookSubscriptionReadDto.Secret}, webhookSubscriptionReadDto);
             }
             else
             {
