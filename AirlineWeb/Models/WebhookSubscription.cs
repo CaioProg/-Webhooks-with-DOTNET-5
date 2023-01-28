@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace AirlineWeb.Models
 {
     public class WebhookSubscription
-    {   
+    {   [Key]
         [Required]
         public int Id { get; set; } 
         [Required]
