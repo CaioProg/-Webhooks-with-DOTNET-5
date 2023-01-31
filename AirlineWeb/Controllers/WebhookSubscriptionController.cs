@@ -35,7 +35,6 @@ namespace AirlineWeb.Controllers
             return Ok(_mapper.Map<WebhookSubscriptionReadDto>(subscription));
         }
 
-
         [HttpPost]
         public ActionResult<WebhookSubscriptionReadDto> CreateSubscription(WebhookSubscriptionCreateDto webhookSubscriptionCreateDto)
         {
