@@ -23,10 +23,10 @@ namespace AirlineWeb.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{flishtCode}", Name = "GetFlightDetailsByCode")]
-        public ActionResult<FlightDetailReadDto> GetFlightDetailsByCode(string flishtCode)
+        [HttpGet("{flightCode}", Name = "GetFlightDetailsByCode")]
+        public ActionResult<FlightDetailReadDto> GetFlightDetailsByCode(string flightCode)
         {
-            var flight = _context.FlightDetails.FirstOrDefault(f => f.FlightCode == flishtCode);
+            var flight = _context.FlightDetails.FirstOrDefault(f => f.FlightCode == flightCode);
 
             if(flight == null)
             {
