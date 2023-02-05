@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AirlineWeb.Data;
 using AirlineWeb.Dtos;
+using AirlineWeb.MessagBus;
 using AirlineWeb.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -16,11 +17,13 @@ namespace AirlineWeb.Controllers
     {
         private readonly AirlineDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IMessageBusClient _messageBus;
 
-        public FlightsController(AirlineDbContext context, IMapper mapper)
+        public FlightsController(AirlineDbContext context, IMapper mapper, IMessageBusClient messaBus)
         {
             _context = context;
             _mapper = mapper;
+            _messageBus = messaBus;
         }
 
         [HttpGet("{flightCode}", Name = "GetFlightDetailsByCode")]
@@ -75,10 +78,35 @@ namespace AirlineWeb.Controllers
                 return NotFound();
             }
 
+            decimal OldPrice = flight.Price;
+
             _mapper.Map(flightDetailUpdateDto, flight);
             
-            _context.SaveChanges();
-            return NoContent();
+            try 
+            {
+                _context.SaveChanges();
+                if(OldPrice != flight.Price)
+                {
+                    Console.WriteLine("Price changed - Place message on bus");
+
+                    var message = new NotificationMessageDto{
+                        WebhookType = "pricechange",
+                        OldPrice = OldPrice,
+                        NewPrice = flight.Price,
+                        FlightCode = flight.FlightCode
+                    };
+                    _messageBus.SendMessage(message);
+                }
+                else
+                {
+                    Console.WriteLine("No Price change");
+                }
+                return NoContent();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
     }
